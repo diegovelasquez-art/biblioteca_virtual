@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diego Velásquez">
+    <title>Biblioteca Horizonte</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <svg class="icono-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 4C5 2.5 9 2.5 12 5C15 2.5 19 2.5 22 4V19C19 17.5 15 17.5 12 20C9 17.5 5 17.5 2 19V4Z" />
+                    <path d="M12 5V20" />
+                </svg>
+                <div class="texto-logo">
+                    <div class="linea-biblioteca">Biblioteca</div>
+                    <div class="linea-horizonte">Horizonte</div>
+                </div>
+            </div>
+
+            <div class="encabezado-derecho">
+                <div class="contenedor-login">
+                    <input type="text" id="campoCorreo" placeholder="estudiante@gmail.com" value="estudiante@gmail.com">
+                    <button id="botonLogin">Ingresar</button>
+                </div>
+                <div class="carrito">
+                    <svg class="icono-carrito" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="13" height="15" rx="1" />
+                        <path d="M7 4v15" />
+                        <rect x="7" y="7" width="13" height="15" rx="1" fill="white" stroke="currentColor" />
+                        <path d="M11 7v15" />
+                    </svg>
+                    <div class="texto-carrito">
+                        <span>Libros seleccionados: <strong id="contadorCarrito">2</strong></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="barra-categorias">
+            <div class="tarjeta-categoria">
+                <svg class="icono-categoria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 4C5 2.5 9 2.5 12 5C15 2.5 19 2.5 22 4V19C19 17.5 15 17.5 12 20C9 17.5 5 17.5 2 19V4Z" />
+                    <path d="M12 5V20" />
+                </svg>
+                <span>Novelas</span>
+            </div>
+
+            <div class="tarjeta-categoria">
+                <svg class="icono-categoria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3" />
+                    <line x1="7.5" y1="15" x2="16.5" y2="15" />
+                </svg>
+                <span>Ciencia</span>
+            </div>
+
+            <div class="tarjeta-categoria">
+                <svg class="icono-categoria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M12 2a10 10 0 0 0-10 10c0 4.4 3.6 8 8 8h1a2 2 0 0 0 2-2c0-.5-.2-1-.5-1.4a2 2 0 0 1 1.5-3.1h2a5 5 0 0 0 5-5c0-3.6-4-6.5-9-6.5z" />
+                    <circle cx="6.5" cy="11.5" r="1" fill="currentColor" />
+                    <circle cx="9.5" cy="7.5" r="1" fill="currentColor" />
+                    <circle cx="14.5" cy="7.5" r="1" fill="currentColor" />
+                </svg>
+                <span>Arte</span>
+            </div>
+
+            <div class="tarjeta-categoria">
+                <svg class="icono-categoria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="7" cy="5" r="2.5" />
+                    <circle cx="17" cy="5" r="2.5" />
+                    <circle cx="12" cy="9" r="4" />
+                    <circle cx="10.5" cy="8.5" r="0.8" fill="currentColor" />
+                    <circle cx="13.5" cy="8.5" r="0.8" fill="currentColor" />
+                    <path d="M12 10v1.5" />
+                    <path d="M7 16c-1.5 0-2.5 1-2.5 2.5S5.5 21 7 21" />
+                    <path d="M17 16c1.5 0 2.5 1 2.5 2.5S18.5 21 17 21" />
+                    <ellipse cx="12" cy="16" rx="5" ry="4" />
+                </svg>
+                <span>Infantil</span>
+            </div>
+        </section>
+
+        <main class="contenido-principal">
+            <section class="banner-principal">
+                <div class="texto-principal">
+                    <h2>Descubre<br>nuevas historias</h2>
+                    <div class="linea-azul"></div>
+                    <p>Explora nuestra biblioteca virtual y encuentra libros para todos los gustos. Conocimiento,
+                        aventura y mucho más al alcance de un clic.</p>
+                </div>
+
+                <div class="caja-imagen-principal">
+                    <div class="reproductor-video">
+                        <svg class="grafico-video" viewBox="0 0 320 180" preserveAspectRatio="none">
+                            <rect width="320" height="180" fill="#b3b3b3" />
+                            <polygon points="0,180 110,80 200,180" fill="#888888" />
+                            <polygon points="120,180 230,55 320,180" fill="#9e9e9e" />
+                            <circle cx="230" cy="50" r="24" fill="#d0d0d0" />
+                            <circle cx="160" cy="90" r="28" fill="#333333" />
+                            <polygon points="153,75 174,90 153,105" fill="#ffffff" />
+                        </svg>
+                        <div class="barra-controles-video">
+                            <span class="play-icono">&#9654;</span>
+                            <span class="tiempo-video">0:00 / 1:30</span>
+                            <div class="iconos-derecha-video">
+                                <span>&#128266;</span>
+                                <span>&#9974;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="pie-video">Conoce la Biblioteca Horizonte</span>
+                </div>
+            </section>
+
+            <aside class="barra-lateral">
+                <h3>Libros recomendados:</h3>
+
+                <div class="item-recomendado">
+                    <div class="caja-boceto">
+                        <svg viewBox="0 0 60 60">
+                            <rect width="60" height="60" fill="#ffffff" stroke="#333333" stroke-width="1.5" />
+                            <line x1="0" y1="0" x2="60" y2="60" stroke="#333333" stroke-width="1.5" />
+                            <line x1="60" y1="0" x2="0" y2="60" stroke="#333333" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="pie-item">
+                        <div class="info-item">
+                            <span class="titulo-item">Cien años de soledad</span>
+                            <span class="autor-item">Gabriel García Márquez</span>
+                            <a href="#" class="enlace-item">Ver más...</a>
+                        </div>
+                        <button class="boton-agregar">+</button>
+                    </div>
+                </div>
+
+                <div class="item-recomendado">
+                    <div class="caja-boceto">
+                        <svg viewBox="0 0 60 60">
+                            <rect width="60" height="60" fill="#ffffff" stroke="#333333" stroke-width="1.5" />
+                            <line x1="0" y1="0" x2="60" y2="60" stroke="#333333" stroke-width="1.5" />
+                            <line x1="60" y1="0" x2="0" y2="60" stroke="#333333" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="pie-item">
+                        <div class="info-item">
+                            <span class="titulo-item">Sapiens</span>
+                            <span class="autor-item">Yuval Noah Harari</span>
+                            <a href="#" class="enlace-item">Ver más...</a>
+                        </div>
+                        <button class="boton-agregar">+</button>
+                    </div>
+                </div>
+
+                <div class="item-recomendado">
+                    <div class="caja-boceto">
+                        <svg viewBox="0 0 60 60">
+                            <rect width="60" height="60" fill="#ffffff" stroke="#333333" stroke-width="1.5" />
+                            <line x1="0" y1="0" x2="60" y2="60" stroke="#333333" stroke-width="1.5" />
+                            <line x1="60" y1="0" x2="0" y2="60" stroke="#333333" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="pie-item">
+                        <div class="info-item">
+                            <span class="titulo-item">El principito</span>
+                            <span class="autor-item">Antoine de Saint-Exupéry</span>
+                            <a href="#" class="enlace-item">Ver más...</a>
+                        </div>
+                        <button class="boton-agregar">+</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
