@@ -1,12 +1,15 @@
+/* ==========================================
+   1. ESTILOS GENERALES Y CONTENEDOR BASE
+   ========================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #cfcfcf;
+    background: #cfcfcf;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -15,13 +18,15 @@ body {
 .contenedor {
     width: 100%;
     max-width: 950px;
-    background: #ffffff;
-    border: 1px solid #999999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    background: #fff;
+    border: 1px solid #999;
     padding: 15px;
 }
 
+
+/* ==========================================
+   2. ENCABEZADO (Logo, Login y Carrito)
+   ========================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -32,303 +37,270 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .icono-logo {
-    width: 46px;
-    height: 46px;
-    stroke: #000000;
+    font-size: 32px;
 }
 
-.texto-logo {
-    display: flex;
-    flex-direction: column;
-}
-
-.linea-biblioteca {
-    font-size: 24px;
+.txt-negro {
+    font-size: 22px;
     font-weight: bold;
-    color: #000000;
-    line-height: 1;
+    color: #000;
 }
 
-.linea-horizonte {
-    font-size: 28px;
+.txt-azul {
+    font-size: 26px;
     font-weight: bold;
     color: #2d62b3;
-    line-height: 1;
 }
 
-.encabezado-derecho {
+.login-carrito {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.contenedor-login {
+.login {
     display: flex;
-    align-items: center;
 }
 
-.contenedor-login input {
-    border: 1px solid #333333;
-    border-right: none;
-    padding: 8px 12px;
+.login input {
+    border: 1px solid #333;
+    padding: 6px 10px;
     font-size: 14px;
-    width: 210px;
-    outline: none;
-    border-radius: 2px 0 0 2px;
+    width: 180px;
+    border-radius: 4px 0 0 4px;
 }
 
-.contenedor-login button {
-    background-color: #2d62b3;
-    color: #ffffff;
-    font-weight: bold;
-    border: 1px solid #333333;
+.login button {
+    background: #2d62b3;
+    color: #fff;
+    border: 1px solid #333;
     border-left: none;
-    padding: 8px 18px;
+    padding: 6px 14px;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 0 2px 2px 0;
-    transition: background-color 0.2s;
-}
-
-.contenedor-login button:hover {
-    background-color: #1e4b91;
+    border-radius: 0 4px 4px 0;
 }
 
 .carrito {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.icono-carrito {
-    width: 32px;
-    height: 32px;
-    stroke: #000000;
-}
-
-.texto-carrito {
     font-size: 13px;
-    color: #000000;
 }
 
-.texto-carrito strong {
-    font-size: 14px;
+.icono-cart {
+    font-size: 22px;
 }
 
-.barra-categorias {
-    background-color: #d2e0ed;
-    padding: 15px 30px;
+
+/* ==========================================
+   3. BARRA DE CATEGORÍAS (NAV)
+   ========================================== */
+.categorias {
+    background: #d6e2ed;
+    padding: 12px;
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
-    border-radius: 2px;
 }
 
-.tarjeta-categoria {
-    background-color: #ffffff;
-    border: 1px solid #a0a0a0;
-    border-radius: 3px;
-    padding: 10px 25px;
+.categoria {
+    background: #fff;
+    border: 1px solid #b0b0b0;
+    flex: 1;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.tarjeta-categoria:hover {
-    transform: translateY(-2px);
-}
-
-.icono-categoria {
-    width: 36px;
-    height: 36px;
-    stroke: #000000;
-    margin-bottom: 6px;
-}
-
-.tarjeta-categoria span {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
-    color: #000000;
+    gap: 4px;
 }
 
-.contenido-principal {
+.categoria span:first-child {
+    font-size: 22px;
+}
+
+
+/* ==========================================
+   4. SECCIÓN DEL BANNER Y VIDEO
+   ========================================== */
+.contenido {
     display: flex;
     gap: 20px;
 }
 
-.banner-principal {
+.banner {
     flex: 2;
-    background-color: #e5e5e5;
-    padding: 25px;
+    background: #e5e5e5;
+    padding: 20px;
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    border-radius: 2px;
+    gap: 15px;
 }
 
-.texto-principal {
+.banner-texto {
     flex: 1;
 }
 
-.texto-principal h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000000;
+.banner-texto h2 {
+    font-size: 28px;
     line-height: 1.1;
 }
 
-.linea-azul {
-    width: 50px;
+.linea {
+    width: 45px;
     height: 4px;
-    background-color: #2d62b3;
-    margin: 12px 0 16px 0;
+    background: #2d62b3;
+    margin: 10px 0 15px 0;
 }
 
-.texto-principal p {
+.banner-texto p {
     font-size: 13px;
-    color: #333333;
+    color: #333;
     line-height: 1.4;
 }
 
-.caja-imagen-principal {
+/* Reproductor de Video con Efecto Hover */
+.banner-video {
     flex: 1.2;
+}
+
+.video-caja {
+    border: 2px solid #333;
+    background: #000;
+    position: relative;
+    cursor: pointer;
+    height: 160px;
     display: flex;
     flex-direction: column;
 }
 
-.reproductor-video {
-    border: 2px solid #333333;
-    background-color: #000000;
-}
-
-.grafico-video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.barra-controles-video {
-    background-color: #262626;
-    color: #ffffff;
+/* Fondo con patrón diagonal CSS para el estado normal */
+.img-normal {
+    flex: 1;
+    background: linear-gradient(to top right, transparent 49%, #666 50%, transparent 51%), 
+                linear-gradient(to top left, transparent 49%, #666 50%, transparent 51%), 
+                #e0e0e0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    font-size: 11px;
+    justify-content: center;
 }
 
-.play-icono {
-    font-size: 11px;
-    cursor: pointer;
-}
-
-.iconos-derecha-video {
+.play-btn {
+    width: 40px;
+    height: 40px;
+    background: #555;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
-    gap: 8px;
-    font-size: 12px;
-    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.img-hover {
+    display: none;
+    flex: 1;
+    background: #2d62b3;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Intercambio de imagen al pasar el cursor */
+.video-caja:hover .img-normal {
+    display: none;
+}
+
+.video-caja:hover .img-hover {
+    display: flex;
+}
+
+.controles {
+    background: #262626;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    font-size: 11px;
 }
 
 .pie-video {
     font-size: 12px;
-    color: #555555;
-    margin-top: 6px;
+    color: #555;
+    margin-top: 5px;
 }
 
-.barra-lateral {
+
+/* ==========================================
+   5. TARJETAS DE LIBROS RECOMENDADOS
+   ========================================== */
+.recomendados {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
-.barra-lateral h3 {
-    font-size: 20px;
-    color: #000000;
-    font-weight: bold;
+.recomendados h3 {
+    font-size: 18px;
 }
 
-.item-recomendado {
+.libro {
     display: flex;
     align-items: center;
-    gap: 12px;
     border: 1px solid #d0d0d0;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 2px;
+    padding: 8px;
+    background: #fff;
+    gap: 10px;
 }
 
-.caja-boceto {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
+/* Cuadro con dibujo X tipo boceto */
+.boceto {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #333;
+    background: linear-gradient(to top right, transparent 48%, #333 49%, #333 51%, transparent 52%), 
+                linear-gradient(to top left, transparent 48%, #333 49%, #333 51%, transparent 52%), 
+                #fff;
 }
 
-.caja-boceto svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.pie-item {
+.info {
     flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.info-item {
     display: flex;
     flex-direction: column;
 }
 
-.titulo-item {
+.info strong {
     font-size: 13px;
-    font-weight: bold;
-    color: #000000;
 }
 
-.autor-item {
+.autor {
     font-size: 11px;
-    color: #666666;
-    margin-top: 2px;
+    color: #666;
 }
 
-.enlace-item {
+.info a {
     font-size: 11px;
     color: #2d62b3;
-    text-decoration: underline;
-    margin-top: 6px;
-    cursor: pointer;
+    margin-top: 4px;
 }
 
-.boton-agregar {
+.btn-agregar {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-color: #0a2240;
-    color: #ffffff;
+    background: #0d2238;
+    color: #fff;
     border: none;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-    flex-shrink: 0;
-    margin-left: 8px;
-}
-
-.boton-agregar:hover {
-    background-color: #17375e;
 }
